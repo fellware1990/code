@@ -50,5 +50,5 @@ jobs:
           file: DockerFiles/Ubuntu/Dockerfile
           push: true
           #repository: fellware/ubuntu
-          tags: ${{ steps.meta.outputs.tags }} #${{aas asecrets.DOCKERHUB_USERNAME }}/ubuntutest:latest2, ${{ secrets.DOCKERHUB_USERNAME }}/ubuntutest:${{ github.run_number }}
+          tags: ${{ steps.meta.outputs.tags }} #${{aass asecrets.DOCKERHUB_USERNAME }}/ubuntutest:latest2, ${{ secrets.DOCKERHUB_USERNAME }}/ubuntutest:${{ github.run_number }}
           labels: ${{ steps.meta.outputs.labels }}
