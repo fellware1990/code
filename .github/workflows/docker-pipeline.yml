@@ -48,7 +48,7 @@ jobs:
         with:
           context: .
           file: DockerFiles/Ubuntu/Dockerfile
-          push: true
+          push: ${{ github.ref_type == 'tag' }}
           #repository: fellware/ubuntu
           tags: ${{ steps.meta.outputs.tags }} #${{aass asecrets.DOCKERHUB_USERNAME }}/ubuntutest:latest2, ${{ secrets.DOCKERHUB_USERNAME }}/ubuntutest:${{ github.run_number }}
           labels: ${{ steps.meta.outputs.labels }}
