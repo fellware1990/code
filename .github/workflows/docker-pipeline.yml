@@ -29,3 +29,11 @@ steps:
   - 
     name: Available platforms
     run: echo ${{ steps.buildx.outputs.platforms }}
+  -
+    name: Build and Push
+    uses: docker/build-push-action@v2
+    with:
+      context: .
+      file: DockerFiles/Ubuntu/Dockerfile
+      push: true
+      tags: ${{ secrets.DOCKERHUB_USERNAME }}/ubuntutest:latest
