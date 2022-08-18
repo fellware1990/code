@@ -36,5 +36,5 @@ jobs:
           context: .
           file: DockerFiles/Ubuntu/Dockerfile
           push: true
-          repository: fellware/ubuntu
+          #repository: fellware/ubuntu
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/ubuntutest:latest, ${{ secrets.DOCKERHUB_USERNAME }}/${{ github.run_number }}
